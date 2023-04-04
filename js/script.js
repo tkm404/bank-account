@@ -18,11 +18,13 @@ BankAccount.prototype.assignId = function() {
 
 function AccountHolder(userName, firstDeposit, withDraw) {
     this.userName = userName;
-    this.firstDeposit = parseInt(firstDeposit);
-    this.withDraw = parseInt(withDraw);
+    this.firstDeposit = parseFloat(firstDeposit);
+    this.withDraw = parseFloat(withDraw);
 }
 
 let bank = new BankAccount();
 let newAccount = new AccountHolder("Joey", "100", "25");
+let newAccount2 = new AccountHolder("Tom", "2,511,111", "199.999");
 bank.addaccountId(newAccount);
+bank.addaccountId(newAccount2);
 
